@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails qa: development" uuid="e71b3b6d-802d-45d7-8db9-bc4d85e65f71">
+      <auth-required>false</auth-required>
+    </data-source>
+  </component>
+</project>

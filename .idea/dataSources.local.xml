@@ -4,5 +4,8 @@
     <data-source name="Rails qa: development" uuid="e71b3b6d-802d-45d7-8db9-bc4d85e65f71">
       <auth-required>false</auth-required>
     </data-source>
+    <data-source name="Rails qa: test" uuid="8c4c5e1a-3092-4164-abca-5732b98bed68">
+      <auth-required>false</auth-required>
+    </data-source>
   </component>
 </project>

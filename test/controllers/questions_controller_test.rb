@@ -3,6 +3,11 @@ require 'test_helper'
 class QuestionsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @question = questions(:one)
+    @update = {
+        title:    'Endo',
+        description: 'fun!',
+        price:    '3000'
+    }
   end
 
   test "should get index" do
@@ -17,7 +22,7 @@ class QuestionsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create question" do
     assert_difference('Question.count') do
-      post questions_url, params: { question: { description: @question.description, price: @question.price, title: @question.title } }
+      post :create, question: @update
     end
 
     assert_redirected_to question_url(Question.last)
@@ -34,7 +39,7 @@ class QuestionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update question" do
-    patch question_url(@question), params: { question: { description: @question.description, price: @question.price, title: @question.title } }
+    put :update, id: @question.to_param, question: @update
     assert_redirected_to question_url(@question)
   end
 
